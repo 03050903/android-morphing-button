@@ -16,14 +16,20 @@
     <color name="holo_orange_light">#ffffbb33</color>
     <color name="holo_red_light">#ffff4444</color>
 
-    <dimen name="mb_corner_radius_2">2dp</dimen>
+    <dimen name="mb_corner_radius_2">25dp</dimen>
     <dimen name="mb_corner_radius_4">4dp</dimen>
     <dimen name="mb_width_100">100dp</dimen>
     <dimen name="mb_width_120">120dp</dimen>
-    <dimen name="mb_width_200">200dp</dimen>
-    <dimen name="mb_height_56">56dp</dimen>
+    <dimen name="mb_width_200">70dp</dimen>
+    <dimen name="mb_height_56">38dp</dimen>
+    <dimen name="mb_height_70">52dp</dimen>
     <dimen name="mb_height_8">8dp</dimen>
     <dimen name="mb_height_4">4dp</dimen>
+
+
+    <dimen name="mb_dimen_70">70dp</dimen>
+    <dimen name="mb_dimen_38">38dp</dimen>
+    <dimen name="mb_dimen_52">52dp</dimen>
 
     <integer name="mb_animation">500</integer>
 

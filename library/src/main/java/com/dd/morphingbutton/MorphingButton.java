@@ -82,7 +82,7 @@ public class MorphingButton extends Button {
 
     private void morphWithAnimation(@NonNull final Params params) {
         mAnimationInProgress = true;
-        setText(null);
+//        setText(null);
         setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
         setPadding(mPadding.left, mPadding.top, mPadding.right, mPadding.bottom);
 
@@ -97,6 +97,7 @@ public class MorphingButton extends Button {
                 .listener(new MorphingAnimation.Listener() {
                     @Override
                     public void onAnimationEnd() {
+                        setText(params.text);//可能导致抖动.
                         finalizeMorphing(params);
                     }
                 });

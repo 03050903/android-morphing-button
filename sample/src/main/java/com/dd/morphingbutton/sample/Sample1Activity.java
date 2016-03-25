@@ -21,6 +21,25 @@ public class Sample1Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_sample_morph);
 
+        ComboView comboView = (ComboView) findViewById(R.id.combo);
+        ComboView.Params params = ComboView.Params.create()
+                .color(color(R.color.mb_blue), color(R.color.mb_blue))
+                .colorPressed(color(R.color.mb_blue_dark), color(R.color.mb_blue_dark))
+
+                .cornerRadius(dimen(R.dimen.mb_corner_radius_2), dimen(R.dimen.mb_dimen_52))// 后三个值必须相同才能是圆
+                .width(dimen(R.dimen.mb_dimen_70), dimen(R.dimen.mb_dimen_52))
+                .height(dimen(R.dimen.mb_dimen_38), dimen(R.dimen.mb_dimen_52))
+
+                .strokeWidth(dimen(R.dimen.mb_corner_radius_1),dimen(R.dimen.mb_corner_radius_1))
+                .strokeColor(color(R.color.mb_blue),color(R.color.mb_blue))
+                .duration(400)
+                .padding(dimen(R.dimen.mb_corner_radius_3))
+                .text("送礼", "连击")
+                .textSize(16)
+                .textColor(color(R.color.mb_text_color_white));
+
+        comboView.settingMorphParams(params);
+
         final MorphingButton btnMorph1 = (MorphingButton) findViewById(R.id.btnMorph1);
         btnMorph1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,12 +95,12 @@ public class Sample1Activity extends BaseActivity {
     private void morphToSuccess(final MorphingButton btnMorph) {
         MorphingButton.Params circle = MorphingButton.Params.create()
                 .duration(integer(R.integer.mb_animation))
-                .cornerRadius(dimen(R.dimen.mb_height_56))
-                .width(dimen(R.dimen.mb_height_56))
-                .height(dimen(R.dimen.mb_height_56))
+                .cornerRadius(dimen(R.dimen.mb_height_70))
+                .width(dimen(R.dimen.mb_height_70))
+                .height(dimen(R.dimen.mb_height_70))
                 .color(color(R.color.mb_green))
                 .colorPressed(color(R.color.mb_green_dark))
-                .icon(R.drawable.ic_done);
+                .text("Done");
         btnMorph.morph(circle);
     }
 
